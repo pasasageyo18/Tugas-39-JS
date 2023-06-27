@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Belajar Javascript - NIOMIC</title>
+  </head>
+  <body>
+    <button type="button" onclick="tombol()" name="button">Jalankan</button>
+    <br />
+    <br />
+    <hr />
+    <b>Active Element</b> Property : <br />
+    <p id="p1">contoh</p>
+    <hr />
+    <b>addEventListener()</b> Property : <br />
+    <p id="p2">contoh</p>
+    <hr />
+    <b>Anchor</b> Property (<a name="jeruk" href="#">Jeruk</a>
+    <a name="semangka" href="#">Semangka</a>) : <br />
+    <p id="p3">contoh</p>
+    <hr />
+    <script type="text/javascript">
+      //add function
+      function tombol() {
+        //get element paragraph
+        let p1 = document.getElementById("p1");
+        let p2 = document.getElementById("p2");
+        let p3 = document.getElementById("p3");
+
+        //active element property
+        let active = document.activeElement.tagName;
+        p1.innerHTML = active;
+
+        //add event listener prop
+        document.addEventListener("click", function () {
+          p2.innerHTML = "Sukses ! Merubah addEventListener()";
+        });
+
+        //anchor prop
+        let aLength = document.anchors.length;
+        p3.innerHTML = aLength;
+      }
+    </script>
+  </body>
+</html>
